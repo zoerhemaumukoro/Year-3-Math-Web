@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Year 3 Maths Progress Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="progress">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <span class="brand-mark">3</span>
+          <div>
+            <p class="brand-name">Year 3 Maths</p>
+            <p class="brand-subtitle">UK National Curriculum</p>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="lessons.html" class="nav-link">Lessons</a>
+          <a href="games.html" class="nav-link">Games</a>
+          <a href="progress.html" class="nav-link active">Progress</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container progress-page">
+      <div id="ownerAccessPanel" class="owner-access-panel">
+        <div class="owner-login-box">
+          <p class="eyebrow">Teacher access</p>
+          <h2>Teacher sign in</h2>
+          <input id="ownerPasswordInput" type="password" placeholder="Enter teacher password" />
+          <button id="ownerLoginBtn" class="mini-btn" type="button">Open dashboard</button>
+          <p id="ownerLoginMessage" class="owner-login-message">Use the teacher password to view student progress.</p>
+        </div>
+      </div>
+
+      <div id="ownerDashboard" class="owner-dashboard hidden">
+        <div class="section-heading">
+          <p class="eyebrow">Track progress</p>
+          <h2>Student progress overview</h2>
+        </div>
+
+        <div class="teacher-controls progress-panel">
+          <label for="studentSelect">Choose student</label>
+          <div class="student-controls">
+            <select id="studentSelect" aria-label="Choose a student"></select>
+            <input id="studentName" type="text" placeholder="Add student name" />
+            <button id="addStudentBtn" class="mini-btn" type="button">Add student</button>
+          </div>
+        </div>
+
+        <div class="progress-layout">
+        <div class="progress-panel">
+          <h3 id="studentTitle">Learning goals</h3>
+          <div class="progress-meter">
+            <div class="progress-bar" aria-label="Progress bar"></div>
+          </div>
+          <div class="progress-stats">
+            <span id="progressText">0/8 skills complete</span>
+            <span>Keep going!</span>
+          </div>
+
+          <ul class="task-list">
+            <li><label><input type="checkbox" data-key="counts" /> Count in steps</label></li>
+            <li><label><input type="checkbox" data-key="addition" /> Addition and subtraction</label></li>
+            <li><label><input type="checkbox" data-key="multiplication" /> Multiplication facts</label></li>
+            <li><label><input type="checkbox" data-key="fractions" /> Fractions</label></li>
+            <li><label><input type="checkbox" data-key="time" /> Time and measure</label></li>
+            <li><label><input type="checkbox" data-key="shapes" /> Shapes and angles</label></li>
+            <li><label><input type="checkbox" data-key="data" /> Data and charts</label></li>
+            <li><label><input type="checkbox" data-key="challenge" /> Maths challenge quiz</label></li>
+          </ul>
+        </div>
+
+        <div class="progress-panel">
+          <h3>Class overview</h3>
+          <ul id="studentOverview" class="student-overview"></ul>
+        </div>
+      </div>
+
+          <div class="progress-layout owner-panel-layout">
+            <div class="progress-panel">
+              <h3>Teacher notifications</h3>
+              <ul id="teacherNotifications" class="notification-list"></ul>
+            </div>
+
+            <div class="progress-panel">
+              <h3>Lesson result summary</h3>
+              <ul id="studentResultSummary" class="student-results"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>Year 3 Maths • National Curriculum for England</p>
+        <p>Celebrate every small success.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
