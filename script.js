@@ -1,3 +1,12 @@
+const warmUpTasks = [
+  { question: "What is 7 × 8?", answers: ["56", "48", "64"], correct: "56" },
+  { question: "What is 9 + 7?", answers: ["15", "16", "17"], correct: "16" },
+  { question: "What is 6 × 4?", answers: ["20", "24", "28"], correct: "24" },
+  { question: "Which number is bigger: 47 or 74?", answers: ["47", "74", "They are equal"], correct: "74" },
+  { question: "What is 18 ÷ 3?", answers: ["5", "6", "7"], correct: "6" },
+  { question: "What is 1/2 of 20?", answers: ["8", "10", "12"], correct: "10" }
+];
+
 const questions = [
   {
     category: "Number",
@@ -88,6 +97,129 @@ const lessonLabels = {
   shapes: "Geometry and data",
   data: "Data and charts",
   challenge: "Maths challenge quiz"
+};
+
+const lessonQuestionBank = {
+  counting: {
+    title: "Number patterns",
+    summary: [
+      "Count in 2s, 3s, 4s, 5s and 8s.",
+      "Spot patterns in sequences and tables.",
+      "Use place value to explain each jump."
+    ],
+    questions: [
+      { prompt: "What comes next: 2, 4, 6, 8, ?", options: ["10", "12", "14", "9"], answer: "10" },
+      { prompt: "What comes next: 5, 10, 15, 20, ?", options: ["22", "25", "30", "35"], answer: "25" },
+      { prompt: "What is the next number in the pattern: 3, 6, 9, 12, ?", options: ["13", "14", "15", "18"], answer: "15" },
+      { prompt: "Which number is missing: 4, 8, 12, __, 20?", options: ["14", "15", "16", "18"], answer: "16" },
+      { prompt: "What is 7 more than 18?", options: ["23", "24", "25", "26"], answer: "25" },
+      { prompt: "Count on in 3s from 9. What is the fourth number?", options: ["18", "21", "24", "27"], answer: "18" },
+      { prompt: "Which number is larger: 47 or 74?", options: ["47", "74", "They are equal", "Cannot tell"], answer: "74" },
+      { prompt: "What number is 10 less than 63?", options: ["53", "52", "43", "62"], answer: "53" },
+      { prompt: "Complete the pattern: 30, 35, 40, __, 50", options: ["45", "42", "47", "44"], answer: "45" },
+      { prompt: "A pattern goes 6, 12, 18, 24, __. What is next?", options: ["28", "30", "32", "36"], answer: "30" }
+    ]
+  },
+  addition: {
+    title: "Addition and subtraction",
+    summary: [
+      "Use number bonds to 10 and 20.",
+      "Add and subtract tens and ones mentally.",
+      "Check answers by using the inverse."
+    ],
+    questions: [
+      { prompt: "What is 6 + 4?", options: ["8", "9", "10", "11"], answer: "10" },
+      { prompt: "What is 12 + 5?", options: ["15", "16", "17", "18"], answer: "17" },
+      { prompt: "What is 20 - 7?", options: ["11", "12", "13", "14"], answer: "13" },
+      { prompt: "Which answer is correct for 38 + 17?", options: ["45", "55", "65", "54"], answer: "55" },
+      { prompt: "What is 42 - 15?", options: ["25", "27", "30", "37"], answer: "27" },
+      { prompt: "What is 19 + 26?", options: ["44", "45", "46", "55"], answer: "45" },
+      { prompt: "Find 63 + 29.", options: ["82", "88", "92", "90"], answer: "92" },
+      { prompt: "Solve 54 - 27.", options: ["23", "27", "29", "37"], answer: "27" },
+      { prompt: "What is 76 + 18?", options: ["84", "90", "94", "96"], answer: "94" },
+      { prompt: "What is 100 - 39?", options: ["61", "63", "67", "71"], answer: "61" }
+    ]
+  },
+  multiplication: {
+    title: "Times tables",
+    summary: [
+      "Learn 3, 4 and 8 times tables.",
+      "Use arrays to show multiplication.",
+      "Match facts to related division facts."
+    ],
+    questions: [
+      { prompt: "What is 2 × 3?", options: ["5", "6", "7", "8"], answer: "6" },
+      { prompt: "What is 3 × 4?", options: ["10", "11", "12", "13"], answer: "12" },
+      { prompt: "What is 5 × 2?", options: ["8", "10", "12", "14"], answer: "10" },
+      { prompt: "What is 7 × 8?", options: ["48", "54", "56", "64"], answer: "56" },
+      { prompt: "What is 4 × 6?", options: ["18", "20", "24", "28"], answer: "24" },
+      { prompt: "What is 8 × 3?", options: ["18", "21", "24", "27"], answer: "24" },
+      { prompt: "What is 6 × 7?", options: ["36", "40", "42", "48"], answer: "42" },
+      { prompt: "What is 9 × 4?", options: ["32", "34", "36", "38"], answer: "36" },
+      { prompt: "What is 7 × 6?", options: ["36", "40", "42", "44"], answer: "42" },
+      { prompt: "What is 8 × 8?", options: ["54", "56", "60", "64"], answer: "64" }
+    ]
+  },
+  fractions: {
+    title: "Fractions",
+    summary: [
+      "Split shapes into equal parts.",
+      "Find fractions such as 1/2, 1/4 and 3/4.",
+      "Compare simple fractions with the same denominator."
+    ],
+    questions: [
+      { prompt: "What is 1/2 of 8?", options: ["2", "4", "6", "8"], answer: "4" },
+      { prompt: "Which fraction is equal to 1/2?", options: ["2/3", "3/6", "1/4", "4/5"], answer: "3/6" },
+      { prompt: "What is 3/4 of 8?", options: ["4", "5", "6", "8"], answer: "6" },
+      { prompt: "Which is larger: 1/4 or 1/2?", options: ["1/4", "1/2", "They are equal", "Cannot tell"], answer: "1/2" },
+      { prompt: "What is 1/3 of 12?", options: ["3", "4", "5", "6"], answer: "4" },
+      { prompt: "Which fraction is the same as 2/4?", options: ["1/2", "1/4", "3/4", "4/5"], answer: "1/2" },
+      { prompt: "What is 2/5 of 10?", options: ["2", "4", "5", "6"], answer: "4" },
+      { prompt: "Which fraction is smaller: 2/3 or 1/3?", options: ["2/3", "1/3", "They are equal", "Cannot tell"], answer: "1/3" },
+      { prompt: "If a pizza is cut into 8 equal slices and you eat 3, what fraction is left?", options: ["3/8", "5/8", "6/8", "7/8"], answer: "5/8" },
+      { prompt: "Which is greater: 3/4 or 2/3?", options: ["3/4", "2/3", "They are equal", "Cannot tell"], answer: "3/4" }
+    ]
+  },
+  measurement: {
+    title: "Time and measure",
+    summary: [
+      "Read analogue and digital clocks.",
+      "Measure length, mass and capacity.",
+      "Find the perimeter of simple shapes."
+    ],
+    questions: [
+      { prompt: "How many centimetres are in 1 metre?", options: ["10", "100", "1000", "50"], answer: "100" },
+      { prompt: "What time is quarter past 4?", options: ["4:05", "4:15", "4:30", "4:45"], answer: "4:15" },
+      { prompt: "A rectangle is 6 cm long and 3 cm wide. What is its perimeter?", options: ["9cm", "18cm", "12cm", "24cm"], answer: "18cm" },
+      { prompt: "How many minutes are in 1 hour?", options: ["30", "45", "60", "90"], answer: "60" },
+      { prompt: "What is half of 1 litre?", options: ["250ml", "500ml", "750ml", "1000ml"], answer: "500ml" },
+      { prompt: "If a clock shows 3:45, what is the time in words?", options: ["Quarter past three", "Quarter to four", "Half past three", "Five to four"], answer: "Quarter to four" },
+      { prompt: "A square has sides of 5 cm. What is the perimeter?", options: ["10cm", "15cm", "20cm", "25cm"], answer: "20cm" },
+      { prompt: "Which is heavier: 1kg or 800g?", options: ["1kg", "800g", "They are equal", "Cannot tell"], answer: "1kg" },
+      { prompt: "A toy car travels 40 cm in 1 second. How far in 3 seconds?", options: ["80cm", "100cm", "120cm", "150cm"], answer: "120cm" },
+      { prompt: "What is the total of 2.5 kg and 1.5 kg?", options: ["3kg", "3.5kg", "4kg", "4.5kg"], answer: "4kg" }
+    ]
+  },
+  geometry: {
+    title: "Geometry and data",
+    summary: [
+      "Identify right angles and symmetry.",
+      "Name 2D shapes and 3D objects.",
+      "Read information from bar charts and tables."
+    ],
+    questions: [
+      { prompt: "How many right angles does a square have?", options: ["1", "2", "3", "4"], answer: "4" },
+      { prompt: "Which shape has 3 sides?", options: ["Square", "Triangle", "Pentagon", "Circle"], answer: "Triangle" },
+      { prompt: "A bar chart shows 6 red, 4 blue and 2 green. Which colour is least popular?", options: ["Red", "Blue", "Green", "Yellow"], answer: "Green" },
+      { prompt: "Which shape has 6 faces?", options: ["Cube", "Sphere", "Cylinder", "Cone"], answer: "Cube" },
+      { prompt: "How many sides does a hexagon have?", options: ["5", "6", "7", "8"], answer: "6" },
+      { prompt: "Which angle is a right angle?", options: ["45°", "90°", "120°", "180°"], answer: "90°" },
+      { prompt: "What do you call a shape with 8 sides?", options: ["Pentagon", "Hexagon", "Octagon", "Triangle"], answer: "Octagon" },
+      { prompt: "If a table shows 7 apples, 5 bananas and 3 pears, which fruit is most popular?", options: ["Apples", "Bananas", "Pears", "Oranges"], answer: "Apples" },
+      { prompt: "How many vertices does a cube have?", options: ["6", "8", "10", "12"], answer: "8" },
+      { prompt: "A shape has 2 pairs of parallel sides and 4 right angles. What is it?", options: ["Triangle", "Rectangle", "Circle", "Pentagon"], answer: "Rectangle" }
+    ]
+  }
 };
 
 function escapeHtml(value) {
@@ -368,6 +500,21 @@ function renderStudentResultSummary(studentName = getSelectedStudent()) {
     .join("");
 }
 
+function updateWelcomeMessage() {
+  const message = document.getElementById("welcomeMessage");
+  if (!message) {
+    return;
+  }
+
+  const studentName = localStorage.getItem(loggedInStudentKey);
+  if (studentName) {
+    message.textContent = `Welcome back, ${studentName}! Your maths journey is ready.`;
+    return;
+  }
+
+  message.textContent = "Welcome to your own maths journey.";
+}
+
 function createStudentAccount(studentName, password) {
   const cleanName = studentName.trim();
   const cleanPassword = password.trim();
@@ -399,6 +546,7 @@ function createStudentAccount(studentName, password) {
   renderStudentOptions();
   const state = getProgress(cleanName);
   updateProgress(state, cleanName);
+  updateWelcomeMessage();
 
   return {
     ok: true,
@@ -431,6 +579,7 @@ function loginStudentAccount(studentName, password) {
   renderStudentOptions();
   const state = getProgress(cleanName);
   updateProgress(state, cleanName);
+  updateWelcomeMessage();
 
   return {
     ok: true,
@@ -647,6 +796,32 @@ function renderProgressPage() {
   }
 }
 
+function resetWarmUpPanel() {
+  const questionEl = document.querySelector(".mini-problem h3");
+  const answerEls = document.querySelectorAll(".mini-row span");
+  const factEls = document.querySelectorAll(".mini-facts strong");
+
+  if (!questionEl || !answerEls.length || !factEls.length) {
+    return;
+  }
+
+  const chosen = warmUpTasks[Math.floor(Math.random() * warmUpTasks.length)];
+  const shuffledAnswers = [...chosen.answers].sort(() => Math.random() - 0.5);
+
+  questionEl.textContent = chosen.question;
+  answerEls.forEach((element, index) => {
+    element.textContent = shuffledAnswers[index] || "";
+  });
+
+  const minutes = [20, 25, 30, 35, 40, 45, 50, 55];
+  const topics = [4, 5, 6, 7, 8];
+  const games = [2, 3, 4, 5];
+
+  factEls[0].textContent = String(minutes[Math.floor(Math.random() * minutes.length)]);
+  factEls[1].textContent = String(topics[Math.floor(Math.random() * topics.length)]);
+  factEls[2].textContent = String(games[Math.floor(Math.random() * games.length)]);
+}
+
 function initQuiz() {
   const scoreValue = document.getElementById("scoreValue");
   const questionCount = document.getElementById("questionCount");
@@ -780,6 +955,58 @@ function setupLessonTabs() {
   });
 }
 
+function renderLessonPanels() {
+  document.querySelectorAll(".lesson-panel").forEach((panel) => {
+    const lessonKey = panel.id.replace("-panel", "");
+    const lesson = lessonQuestionBank[lessonKey];
+
+    if (!lesson) {
+      return;
+    }
+
+    const cardMarkup = `
+      <div class="lesson-card">
+        <div class="lesson-card-header">
+          <span class="lesson-badge">Lesson goals</span>
+          <span class="tag">${lesson.title}</span>
+        </div>
+        <h3>${lesson.title}</h3>
+        <ul>
+          ${lesson.summary.map((item) => `<li>${item}</li>`).join("")}
+        </ul>
+      </div>
+    `;
+
+    const questionsMarkup = lesson.questions
+      .map((question, index) => {
+        const difficulty = index < 3 ? "Easy" : index < 7 ? "Medium" : "Hard";
+        const difficultyClass = index < 3 ? "easy" : index < 7 ? "medium" : "hard";
+
+        return `
+          <div class="question-panel lesson-question-card">
+            <div class="lesson-question-meta">
+              <span class="category">${difficulty} • Question ${index + 1}</span>
+              <span class="difficulty-pill ${difficultyClass}">${difficulty}</span>
+            </div>
+            <h4>${question.prompt}</h4>
+            <div class="practice-answers" data-correct="${escapeHtml(String(question.answer))}">
+              ${question.options
+                .map(
+                  (option) =>
+                    `<button class="practice-option" type="button" data-answer="${escapeHtml(String(option))}">${option}</button>`
+                )
+                .join("")}
+            </div>
+            <p class="practice-feedback" aria-live="polite"></p>
+          </div>
+        `;
+      })
+      .join("");
+
+    panel.innerHTML = `${cardMarkup}${questionsMarkup}`;
+  });
+}
+
 function setupLessonQuestions() {
   document.querySelectorAll(".practice-answers").forEach((answerGroup) => {
     const correctAnswer = answerGroup.dataset.correct;
@@ -797,7 +1024,7 @@ function setupLessonQuestions() {
         });
 
         const studentName = getSelectedStudent();
-        const lessonKey = answerGroup.closest(".lesson-panel").id.replace("-panel", "");
+        const lessonKey = button.closest(".lesson-panel").id.replace("-panel", "");
         const mappedKey = {
           counting: "counts",
           addition: "addition",
@@ -1023,10 +1250,14 @@ function setupLoginRoleButtons() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  updateWelcomeMessage();
+  resetWarmUpPanel();
+
   if (!enforceLoginGate()) {
     return;
   }
 
+  renderLessonPanels();
   setupLoginRoleButtons();
   setupStudentAccountForm();
   setupStudentLoginForm();
